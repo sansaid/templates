@@ -1,0 +1,2 @@
+output: ../api/api.gen.go
+package: api
