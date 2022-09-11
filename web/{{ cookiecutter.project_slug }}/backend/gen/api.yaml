@@ -1,7 +1,7 @@
 openapi: "3.1.0"
 info:
   version: 0.1.0
-  title: {{ cookiecutter.repo-name }} API
+  title: {{ cookiecutter.repo_name }} API
   description: An API for getting bin collection details from Reading council
 paths:
   /addresses/{postcode}:

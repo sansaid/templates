@@ -1,6 +1,6 @@
-# {{ cookiecutter.repo-name }} - frontend
+# {{ cookiecutter.repo_name }} - frontend
 
-This is where the UI code for {{ cookiecutter.repo-name }} resides.
+This is where the UI code for {{ cookiecutter.repo_name }} resides.
 
 This is still a work in progress. See [TODOs](#todo) for a list of things left to implement.
 
