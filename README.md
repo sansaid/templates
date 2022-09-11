@@ -1,5 +1,7 @@
 # List of cookiecutter templates
 
+This directory contains a list of cookiecutter templates I use for my personal projects.
+
 ## TODO
 
 - [ ] Split each directory out into its own repo so we can use cookiecutter natively
