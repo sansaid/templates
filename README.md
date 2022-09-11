@@ -2,9 +2,16 @@
 
 This directory contains a list of cookiecutter templates I use for my personal projects.
 
+Creation of projects should happen using the Makefile to ensure consistency.
+
+## BUGS
+
+- [ ] Fix `post_gen_project` script in `web` - stuck at not being able to create remote repo because cannot initialise git repo
+
 ## TODO
 
 - [ ] Split each directory out into its own repo so we can use cookiecutter natively
+    - [ ] If doing this, add a .devcontainer in the root of the cookiecutter repo so that it's easy to modify the cookiecutter
 - [ ] Create a Github template for a cookiecutter template (so that it generates the hooks and variable defaults)
 - [ ] Create a [post-generate hook](https://cookiecutter.readthedocs.io/en/stable/advanced/hooks.html) that git initialises the repo, creates a repo in Github and initialises the code there 
 - [ ] Maybe create a cookiecutter binary in Golang?
