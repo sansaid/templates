@@ -1,4 +1,7 @@
 {
     "repo_name": "confused-snake-builder",
-    "builder_name": "crazy-haired-llama"
+    "builder_name": "crazy-haired-llama",
+    "repo_description": "Description of repo",
+    "init_commit": ["yes", "no"],
+    "create_gh_repo": ["no", "yes"]
 }
