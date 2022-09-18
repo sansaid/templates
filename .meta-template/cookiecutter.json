@@ -1,0 +1,6 @@
+{
+    "repo_name": "snake-cased-repo",
+    "repo_description": "Description of repo",
+    "init_commit": ["yes", "no"],
+    "create_gh_repo": ["no", "yes"]
+}
