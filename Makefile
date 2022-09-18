@@ -1,10 +1,4 @@
-.PHONY: workflow-builder web cli-tool
+.PHONY: template
 
-workflow-builder:
-	@cookiecutter -o ./.projects ./workflow-builder
-
-web:
-	@cookiecutter -o ./.projects ./web
-
-cli-tool:
-	@cookiecutter -o ./.projects ./cli-tool
+template:
+	@cp ./.meta-template _RENAME_ME
