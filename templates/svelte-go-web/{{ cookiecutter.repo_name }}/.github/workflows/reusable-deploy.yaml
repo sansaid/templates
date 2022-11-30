@@ -12,6 +12,7 @@ on:
         description: "The fly.io API token used to perform the deployment."
         required: true
 
+{% raw -%}
 env:
   FLY_API_TOKEN: ${{ secrets.fly-api-token }}
 
@@ -26,3 +27,4 @@ jobs:
       - uses: actions/checkout@v3
       - uses: superfly/flyctl-actions/setup-flyctl@master
       - run: flyctl deploy --remote-only
+{% endraw %}

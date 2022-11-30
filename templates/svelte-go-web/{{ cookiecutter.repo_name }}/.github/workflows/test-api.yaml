@@ -10,10 +10,12 @@ on:
     paths:
       - api/**
       - .github/**
-
+      
+{% raw -%}
 jobs:
   test-api:
     name: Test API
     uses: ./.github/workflows/reusable-test-go.yaml
     with:
       component: apps/api
+{% endraw %}

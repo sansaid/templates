@@ -7,9 +7,9 @@ on:
     - dev
 
 jobs:
-  sponty:
+  release-bot:
     env:
-      APP_NAME: sponty-bot
+      APP_NAME: {{ cookiecutter.repo_name }}-bot
       AWS_REGION: eu-west-2
     runs-on: ubuntu-latest
     environment: production
@@ -24,6 +24,7 @@ jobs:
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
+{% raw -%}
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ env.AWS_REGION }} 
@@ -41,16 +42,17 @@ jobs:
 
           docker push ${IMAGE_NAME}
           aws lightsail push-container-image --service-name ${{ env.APP_NAME }} --label ${LABEL} --image ${IMAGE_NAME}
+{% endraw %}
       - name: Deploy to Lightsail
         run: |
-          aws lightsail create-container-service-deployment --service-name ${{ env.APP_NAME }} \
+          aws lightsail create-container-service-deployment --service-name ${{ '{{' }}{ env.APP_NAME {{ '}}' }} \
             --containers "{
-            \"sponty\": \
+            \"{{ cookiecutter.repo_name }}\": \
               { \
-                \"image\": \":${{ env.APP_NAME }}.${LABEL}.latest\", \
+                \"image\": \":${{ '{{' }}  env.APP_NAME {{ '}}' }}.${LABEL}.latest\", \
                 \"environment\": { \
-                  \"GUILD_ID\": \"${{ secrets.SPONTY_GUILD_ID }}\", \
-                  \"BOT_TOKEN\": \"${{ secrets.SPONTY_BOT_TOKEN }}\" \
+                  \"GUILD_ID\": \"${{ '{{' }} secrets.{{ cookiecutter.repo_name|upper }}_GUILD_ID {{ '}}' }}\", \
+                  \"BOT_TOKEN\": \"${{ '{{' }} secrets.{{ cookiecutter.repo_name|upper }}_BOT_TOKEN {{ '}}' }}\" \
                 } \
               } \
             }"

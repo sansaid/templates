@@ -8,7 +8,8 @@ on:
         description: "The component to test. Must match the name of a directory in the root of the repo."
         required: true
         type: string
-  
+        
+{% raw -%}  
 jobs:
   test-go:
     name: Test Golang app
@@ -27,3 +28,4 @@ jobs:
         run: go test -v ./...
       - name: Check codebase builds successfully
         run: go build -v ./...
+{% endraw %}

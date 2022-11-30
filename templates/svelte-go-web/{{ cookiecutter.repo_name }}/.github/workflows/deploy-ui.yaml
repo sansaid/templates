@@ -20,5 +20,7 @@ jobs:
     with:
       component: apps/ui
     secrets:
+{% raw -%}
       fly-api-token: ${{ secrets.FLY_API_TOKEN }}
+{% endraw %}
     needs: [ test-ui ]
