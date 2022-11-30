@@ -11,7 +11,7 @@ on:
       - ui/**
       - .github/**
 
-{% raw -%}
+{%- raw %}
 jobs:
   test-ui:
     name: Test UI

@@ -9,7 +9,7 @@ on:
         required: true
         type: string
         
-{% raw -%}  
+{%- raw %}  
 jobs:
   test-go:
     name: Test Golang app

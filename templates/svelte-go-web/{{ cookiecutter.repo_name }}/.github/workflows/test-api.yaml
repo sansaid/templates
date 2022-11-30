@@ -10,8 +10,8 @@ on:
     paths:
       - api/**
       - .github/**
-      
-{% raw -%}
+
+{%- raw %}
 jobs:
   test-api:
     name: Test API

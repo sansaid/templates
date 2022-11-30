@@ -18,7 +18,7 @@ jobs:
     with:
       component: frontend
     secrets:
-{% raw -%}
+{%- raw %}
       fly-api-token: ${{ secrets.FLY_API_TOKEN }}
 {% endraw %}
     needs: [ test-frontend ]
