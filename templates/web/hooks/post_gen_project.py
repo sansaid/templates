@@ -1,5 +1,14 @@
 import os
 import subprocess
+import sys
+
+{% if cookiecutter.init_commit not in ["yes", "no"] %}
+sys.exit("init_commit must be yes or no")
+{% endif %}
+
+{% if cookiecutter.create_gh_repo not in ["yes", "no"] %}
+sys.exit("create_gh_repo must be yes or no")
+{% endif %}
 
 sub_env = os.environ.copy() 
 
