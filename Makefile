@@ -1,5 +1,7 @@
 .PHONY: template
 
+TEMPLATE_NAME = _rename-me
+
 template:
-	@cp -r ./.meta-template ./templates/_RENAME_ME
+	@cp -r ./.meta-template ./templates/$(TEMPLATE_NAME)
 
