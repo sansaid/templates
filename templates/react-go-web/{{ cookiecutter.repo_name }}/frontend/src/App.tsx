@@ -1,15 +1,11 @@
 import React from 'react';
 import './App.css';
-import { CodeTxt } from './components/CodeTxt'
-import { FormHero } from './components/FormHero'
+import { CalendarForm } from './views/CalendarForm'
 
 function App() {
   return (
     <div className="App">
-      <p>
-        👋 I'm <CodeTxt>binboi</CodeTxt> and I can remind you of your next bin collection day.
-      </p>
-      <FormHero/>
+      <CalendarForm/>
     </div>
   );
 }

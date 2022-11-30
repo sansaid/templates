@@ -11,7 +11,7 @@
 }
 
 * {
-  font-size: calc(14px + 2vmin);
+  font-size: 3.2vmin;
   color: white;
   font-family: 'Nunito', sans-serif;
   font-weight: 200;
