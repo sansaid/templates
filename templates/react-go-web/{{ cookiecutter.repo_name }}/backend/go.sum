@@ -1,3 +1,5 @@
+github.com/arran4/golang-ical v0.0.0-20221122102835-109346913e54 h1:HfAA5Vxbo64UTckj+EW/hfBjvvcUcbcwWCASvypy8JU=
+github.com/arran4/golang-ical v0.0.0-20221122102835-109346913e54/go.mod h1:BSTTrYHuM12oAL8jDdcmPdw02SBThKYWNFHQlvEG6b0=
 github.com/creack/pty v1.1.9/go.mod h1:oKZEueFk5CKHvIhNR5MUki03XCEU+Q6VDXinZuGJ33E=
 github.com/cyberdelia/templates v0.0.0-20141128023046-ca7fffd4298c/go.mod h1:GyV+0YP4qX0UQ7r2MoYZ+AvYDp12OF5yg4q8rGnyNh4=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=

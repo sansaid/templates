@@ -5,7 +5,7 @@ import (
 	"os"
 
 	oapimiddleware "github.com/deepmap/oapi-codegen/pkg/middleware"
-	"github.com/fuz95esi/binboi/backboi/api"
+	"backend/api"
 	"github.com/labstack/echo/v4"
 	echomiddleware "github.com/labstack/echo/v4/middleware"
 )
@@ -30,9 +30,10 @@ func main() {
 	e.Use(echomiddleware.Logger())
 	e.Use(echomiddleware.Recover())
 	e.Use(oapimiddleware.OapiRequestValidator(swagger))
+	e.Use(echomiddleware.CORS())
 
 	api.RegisterHandlers(e, proxy)
 
 	// Start server
-	e.Logger.Fatal(e.Start(":1323"))
+	e.Logger.Fatal(e.Start(":8080"))
 }

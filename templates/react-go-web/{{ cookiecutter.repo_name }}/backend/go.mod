@@ -3,8 +3,10 @@ module github.com/fuz95esi/binboi/backboi
 go 1.18
 
 require (
+	github.com/arran4/golang-ical v0.0.0-20221122102835-109346913e54
 	github.com/deepmap/oapi-codegen v1.11.0
 	github.com/getkin/kin-openapi v0.97.0
+	github.com/google/uuid v1.3.0
 	github.com/labstack/echo/v4 v4.7.2
 )
 
@@ -12,7 +14,6 @@ require (
 	github.com/go-openapi/jsonpointer v0.19.5 // indirect
 	github.com/go-openapi/swag v0.21.1 // indirect
 	github.com/golang-jwt/jwt v3.2.2+incompatible // indirect
-	github.com/google/uuid v1.3.0 // indirect
 	github.com/gorilla/mux v1.8.0 // indirect
 	github.com/invopop/yaml v0.1.0 // indirect
 	github.com/josharian/intern v1.0.0 // indirect
