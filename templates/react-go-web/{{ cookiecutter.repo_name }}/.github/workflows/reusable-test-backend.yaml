@@ -1,0 +1,32 @@
+name: reusable-test-backend
+
+on:
+  pull_request:
+    branches:
+    - main
+    - 'release/**'
+    - 'cicd/**'
+    - dev
+    paths:
+      - backend/**
+      - .github/**
+  workflow_call:
+  
+jobs:
+  test-backend:
+    name: Test backend
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: backend
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Set up Go
+        uses: actions/setup-go@v3
+        with:
+          go-version: 1.18
+      - name: Test codebase
+        run: go test -v ./...
+      - name: Check codebase builds successfully
+        run: go build -v ./...

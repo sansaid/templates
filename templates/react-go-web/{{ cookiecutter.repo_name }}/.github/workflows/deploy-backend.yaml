@@ -1,0 +1,22 @@
+name: deploy-backend
+
+on:
+  push:
+    paths:
+      - backend/**
+      - .github/**
+    branches:
+    - main
+
+jobs:
+  test-backboi:
+    name: Test backend
+    uses: ./.github/workflows/reusable-test-backend.yaml
+  deploy-backboi:
+    name: Deploy backend
+    uses: ./.github/workflows/reusable-deploy.yaml
+    with:
+      component: backend
+    secrets:
+      fly-api-token: ${{ secrets.FLY_API_TOKEN }}
+    needs: [ test-backend ]

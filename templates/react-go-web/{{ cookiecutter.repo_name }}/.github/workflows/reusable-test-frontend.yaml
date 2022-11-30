@@ -1,0 +1,31 @@
+name: reusable-test-frontend
+
+on:
+  workflow_call:
+  pull_request:
+    branches:
+    - main
+    - 'release/**'
+    - 'cicd/**'
+    - dev
+    paths:
+      - frontend/**
+      - .github/**
+
+jobs:
+  test-frontend:
+    name: Test frontend
+    runs-on: ubuntu-latest
+    defaults:
+        run:
+          working-directory: frontend
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Setup NodeJS
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+      - run: npm ci
+      - run: npm run build --if-present
+      - run: npm run test

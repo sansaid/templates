@@ -1,0 +1,22 @@
+name: deploy-frontend
+
+on:
+  push:
+    paths:
+      - frontend/**
+      - .github/**
+    branches:
+    - main
+
+jobs:
+  test-frontend:
+    name: Test frontend
+    uses: ./.github/workflows/reusable-test-frontend.yaml
+  deploy-frontend:
+    name: Deploy frontend
+    uses: ./.github/workflows/reusable-deploy.yaml
+    with:
+      component: frontend
+    secrets:
+      fly-api-token: ${{ secrets.FLY_API_TOKEN }}
+    needs: [ test-frontend ]
