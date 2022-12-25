@@ -6,8 +6,8 @@
 
 `{{ cookiecutter.repo_name }}` is a monorepo that stores its frontend and backend code in two separate directories:
 
-* [frontboi](./frontend/)
-* [backboi](./backend/)
+* [frontend](./frontend/)
+* [backend](./backend/)
 
 The directories should be as self-contained as possible, such that it should be easy to pull them out into their own Github repos in the future. For the time being, it's just easier to maintain a monorepo at small scale than create two separate Github repos. If you want to contribute to either source code, please follow the README in each directory. Otherwise, docs are globally maintained in the [`docs`](./docs/) directory.
 
