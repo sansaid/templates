@@ -1,6 +1,7 @@
 {
-    "repo_name": "snake-cased-repo",
+    "repo_name": "kebab-cased-repo",
+    "__cap_repo_name": "{{ cookiecutter.repo_name|upper }}",
     "repo_description": "Description of repo",
-    "init_commit": ["Whether or not to create an initial commit when project created: yes, no", "yes", "no"],
-    "create_gh_repo": ["Whether or not to create a Github repo of the same name when project is created: yes, no", "no", "yes"]
+    "add_initial_commit": "y",
+    "create_gh_repo": "y"
 }
