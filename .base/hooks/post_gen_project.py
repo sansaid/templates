@@ -14,9 +14,9 @@ sub_env = os.environ.copy()
 
 {% if cookiecutter.add_initial_commit == "y" %}
 subprocess.run(['git', 'init'], check=True)
-subprocess.run(['git', 'branch', '-m', 'main'], check=True)
 subprocess.run(['git', 'add', '.'], check=True)
 subprocess.run(['git', 'commit', '-m', 'Initial commit - auto generated from cookiecutter'], check=True)
+subprocess.run(['git', 'branch', '-m', 'main'], check=True)
 {% endif %}
 
 {% if cookiecutter.create_gh_repo == "y" %}
