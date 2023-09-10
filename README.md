@@ -11,7 +11,3 @@ To create a project from a cookiecutter, call the following from the location wh
 ```
 cookiecutter https://github.com/sansaid/templates.git --directory="templates/<name of template>"
 ```
-
-## TODO
-
-- [ ] Create a cli-tool cookiecutter: for creating CLI tooling
